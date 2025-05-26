@@ -2,15 +2,12 @@
   <nav class="bottom-tabs">
     <RouterLink to="/" class="tab-item" active-class="active">
       <div class="tab-icon">🏠</div>
-      <span class="tab-label">Home</span>
     </RouterLink>
     <RouterLink to="/about" class="tab-item" active-class="active">
       <div class="tab-icon">ℹ️</div>
-      <span class="tab-label">About</span>
     </RouterLink>
     <RouterLink to="/profile" class="tab-item" active-class="active">
       <div class="tab-icon">👤</div>
-      <span class="tab-label">Profile</span>
     </RouterLink>
   </nav>
 </template>
@@ -35,9 +32,9 @@ import { RouterLink } from 'vue-router';
 .tab-item {
   flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
   text-decoration: none;
   color: var(--color-text-mute);
   transition: color 0.3s ease;
@@ -52,12 +49,6 @@ import { RouterLink } from 'vue-router';
 }
 
 .tab-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
-}
-
-.tab-label {
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: 1.75rem;
 }
 </style>

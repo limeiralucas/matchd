@@ -19,9 +19,9 @@ describe('BottomTabNavigation', () => {
         plugins: [router],
       },
     });
-    expect(wrapper.text()).toContain('Home');
-    expect(wrapper.text()).toContain('About');
-    expect(wrapper.text()).toContain('Profile');
+    expect(wrapper.text()).toContain('🏠');
+    expect(wrapper.text()).toContain('ℹ️');
+    expect(wrapper.text()).toContain('👤');
   });
 
   it('has correct number of tab items', () => {

@@ -7,6 +7,7 @@ A simple Vue.js application with bottom tab navigation built with Vite and TypeS
 - ✅ Vue 3 with TypeScript
 - ✅ Vite for fast development and building
 - ✅ Bottom tab navigation with 3 tabs (Home, About, Profile)
+- ✅ Iconify icons for beautiful SVG icons
 - ✅ Vue Router for navigation
 - ✅ Unit tests with Vitest
 - ✅ ESLint and Prettier for code quality with semicolon enforcement
@@ -80,6 +81,7 @@ pnpm test:unit --watch
 - [Vue 3](https://vuejs.org/) - Progressive JavaScript framework
 - [Vite](https://vitejs.dev/) - Fast build tool
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Iconify](https://iconify.design/) - Beautiful SVG icons
 - [Vue Router](https://router.vuejs.org/) - Client-side routing
 - [Vitest](https://vitest.dev/) - Unit testing framework
 - [ESLint](https://eslint.org/) - Code linting

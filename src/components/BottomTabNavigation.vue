@@ -1,19 +1,20 @@
 <template>
   <nav class="bottom-tabs">
     <RouterLink to="/" class="tab-item" active-class="active">
-      <div class="tab-icon">🏠</div>
+      <Icon icon="mdi:home" class="tab-icon" />
     </RouterLink>
     <RouterLink to="/about" class="tab-item" active-class="active">
-      <div class="tab-icon">ℹ️</div>
+      <Icon icon="mdi:information" class="tab-icon" />
     </RouterLink>
     <RouterLink to="/profile" class="tab-item" active-class="active">
-      <div class="tab-icon">👤</div>
+      <Icon icon="mdi:account" class="tab-icon" />
     </RouterLink>
   </nav>
 </template>
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
+import { Icon } from '@iconify/vue';
 </script>
 
 <style scoped>
@@ -49,6 +50,7 @@ import { RouterLink } from 'vue-router';
 }
 
 .tab-icon {
-  font-size: 1.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 </style>

@@ -19,9 +19,9 @@ describe('BottomTabNavigation', () => {
         plugins: [router],
       },
     });
-    expect(wrapper.text()).toContain('🏠');
-    expect(wrapper.text()).toContain('ℹ️');
-    expect(wrapper.text()).toContain('👤');
+    const icons = wrapper.findAll('svg');
+    expect(icons).toHaveLength(3);
+    expect(wrapper.html()).toContain('class="tab-icon"');
   });
 
   it('has correct number of tab items', () => {

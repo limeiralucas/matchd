@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="public/logo.png" alt="Matchd Logo" width="200" />
+</div>
+
 # Matchd
 
 A simple Vue.js application with bottom tab navigation built with Vite and TypeScript.

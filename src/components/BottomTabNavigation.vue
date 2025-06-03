@@ -1,7 +1,7 @@
 <template>
   <nav class="bottom-tabs">
     <RouterLink to="/" class="tab-item" active-class="active">
-      <Icon icon="mdi:home" class="tab-icon" />
+      <Icon icon="mdi:scoreboard" class="tab-icon" />
     </RouterLink>
     <RouterLink to="/about" class="tab-item" active-class="active">
       <Icon icon="mdi:information" class="tab-icon" />

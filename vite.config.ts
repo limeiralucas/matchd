@@ -13,4 +13,13 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  build: {
+    rollupOptions: {
+      external: [
+        /\/__tests__\//, // Exclude all files in __tests__ directories
+        /\.spec\./, // Exclude all .spec files
+        /\.test\./, // Exclude all .test files
+      ],
+    },
+  },
 });

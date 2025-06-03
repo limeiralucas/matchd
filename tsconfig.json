@@ -10,5 +10,6 @@
     {
       "path": "./tsconfig.vitest.json"
     }
-  ]
+  ],
+  "exclude": ["**/__tests__/**", "**/*.spec.*", "**/*.test.*"]
 }

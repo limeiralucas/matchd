@@ -24,8 +24,7 @@ import { Icon } from '@iconify/vue';
   left: 0;
   right: 0;
   display: flex;
-  background-color: var(--color-background);
-  border-top: 1px solid var(--color-border);
+  background-color: var(--color-background-secondary);
   padding: 0.5rem 0;
   z-index: 100;
 }
@@ -37,16 +36,16 @@ import { Icon } from '@iconify/vue';
   justify-content: center;
   padding: 1rem;
   text-decoration: none;
-  color: var(--color-text-mute);
+  color: var(--color-text-secondary);
   transition: color 0.3s ease;
 }
 
 .tab-item:hover {
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 
 .tab-item.active {
-  color: var(--color-brand);
+  color: var(--apple-blue);
 }
 
 .tab-icon {

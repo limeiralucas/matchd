@@ -19,6 +19,24 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  /* Apple's System Colors for Dark Mode */
+  --apple-red: #ff453a; /* Apple's red */
+  --apple-blue: #0a84ff; /* Apple's blue */
+
+  /* Background Colors */
+  --color-background-primary: #1c1c1e; /* Primary background */
+  --color-background-secondary: #2c2c2e; /* Secondary background */
+  --color-background-tertiary: #3a3a3c; /* Tertiary background */
+
+  /* Text Colors */
+  --color-text-primary: #ffffff; /* Primary text */
+  --color-text-secondary: #98989d; /* Secondary text */
+  --color-text-tertiary: #636366; /* Tertiary text */
+
+  /* Team Colors */
+  --team-red: var(--apple-red);
+  --team-blue: var(--apple-blue);
 }
 
 /* semantic color variables for this project */
@@ -60,25 +78,15 @@
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  color: var(--color-text-primary);
+  background: var(--color-background-primary);
   transition:
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
   font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+    'SF Mono', SFMono-Regular, ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

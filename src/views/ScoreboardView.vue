@@ -7,6 +7,22 @@ const blueScore = ref(0);
 // Example player data - this would typically come from your state management
 const redTeamPlayers = ref(['Player 1', 'Player 2', 'Player 3', 'Player 8']);
 const blueTeamPlayers = ref(['Player 4', 'Player 5', 'Player 6', 'Player 7']);
+
+const handleScoreTouch = (event: Event) => {
+  // Prevent default to avoid any unwanted behaviors
+  event.preventDefault();
+
+  // Get the element that was touched
+  const element = event.currentTarget as HTMLElement;
+
+  // Add pressed class
+  element.classList.add('pressed');
+
+  // Remove pressed class after animation
+  setTimeout(() => {
+    element.classList.remove('pressed');
+  }, 200);
+};
 </script>
 
 <template>
@@ -18,11 +34,11 @@ const blueTeamPlayers = ref(['Player 4', 'Player 5', 'Player 6', 'Player 7']);
         </ul>
 
         <div class="scores-section">
-          <div class="score-box red">
+          <div class="score-box red" @touchstart="handleScoreTouch" @touchend.prevent>
             <div class="score-value">{{ redScore }}</div>
           </div>
           <div class="vs">VS</div>
-          <div class="score-box blue">
+          <div class="score-box blue" @touchstart="handleScoreTouch" @touchend.prevent>
             <div class="score-value">{{ blueScore }}</div>
           </div>
         </div>
@@ -167,6 +183,9 @@ const blueTeamPlayers = ref(['Player 4', 'Player 5', 'Player 6', 'Player 7']);
     0 4px 12px rgba(0, 0, 0, 0.5),
     0 8px 16px rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .score-box::before {
@@ -194,7 +213,8 @@ const blueTeamPlayers = ref(['Player 4', 'Player 5', 'Player 6', 'Player 7']);
   z-index: -1;
 }
 
-.score-box:active {
+.score-box:active,
+.score-box.pressed {
   transform: translateY(0);
   box-shadow:
     0 2px 6px rgba(0, 0, 0, 0.4),

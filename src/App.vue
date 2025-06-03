@@ -17,10 +17,15 @@ import BottomTabNavigation from './components/BottomTabNavigation.vue';
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
 }
 
 .main-content {
   flex: 1;
   padding-bottom: 5rem; /* Space for bottom navigation */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 </style>
